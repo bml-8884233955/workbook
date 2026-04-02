@@ -1,0 +1,17 @@
+import "./Card.css";
+
+function Card({ title, description, children, cardClicked }) {
+    return (
+        <>
+
+            <div className="card" onClick={cardClicked}>
+                <h3 className="card_title">{title}</h3>
+                <p className="card_description">{description}</p>
+                {/* Extra content (butons, links, etc.) */}
+                {children}
+            </div>
+        </>
+    )
+};
+
+export default Card;
