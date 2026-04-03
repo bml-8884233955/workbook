@@ -32,24 +32,24 @@ const UseMemo = () => {
 
     return (
         <>
-            <h2>UseMemo</h2>
-            <p> useMemo is a  React Hook used to memoize(cache) a calculated value</p>
-            <p> It prevents expensive calculations on every render</p>
+            <h2 className="text-2xl font-bold text-gray-700">UseMemo</h2>
+            <p className="text-base text-gray-700 mb-4"> useMemo is a  React Hook used to memoize(cache) a calculated value</p>
+            <p className="text-base text-gray-700 mb-4"> It prevents expensive calculations on every render</p>
             {basicSyntax}
             without useMemo , function will run on every render  - slow performance
 
             <h3> Important Points</h3>
-            <p>1. Memoizes value(not function), Stores result, not function</p>
-            <p>2. Runs only when value change
+            <p className="text-base text-gray-700 mb-4">1. Memoizes value(not function), Stores result, not function</p>
+            <p className="text-base text-gray-700 mb-4">2. Runs only when value change
                 {sampleCode}
             </p>
-            <p>Works for  expensive calculations</p>
+            <p className="text-base text-gray-700 mb-4">Works for  expensive calculations</p>
             <ul>
                 <li> filtering large lisys</li>
                 <li>sorting</li>
-                <p> heavy computations</p>
+                <p className="text-base text-gray-700 mb-4"> heavy computations</p>
             </ul>
-            <p>
+            <p className="text-base text-gray-700 mb-4">
 
                 7. Common Interview Questions
                 ❓ Q1: What is useMemo?

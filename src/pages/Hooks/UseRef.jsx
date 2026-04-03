@@ -29,8 +29,8 @@ function UseRef() {
 
     return (
         <>
-            <h2> What is useRef?</h2>
-            <p>
+            <h2 className="text-2xl font-bold text-gray-700"> What is useRef?</h2>
+            <p className="text-base text-gray-700 mb-4">
                 useRef is a React Hook used to:
                 <ul>
                     <li>
@@ -41,7 +41,7 @@ function UseRef() {
                     </li>
                 </ul>
             </p>
-            <p>
+            <p className="text-base text-gray-700 mb-4">
                 Basic Syntax
                 const ref = useRef(initialValue);
 
@@ -76,25 +76,25 @@ function UseRef() {
                 </li>
             </ul>
             <div>
-                <h2> use Ref common use cases</h2>
-                <p>Access DOM Element</p>
+                <h2 className="text-2xl font-bold text-gray-700"> use Ref common use cases</h2>
+                <p className="text-base text-gray-700 mb-4">Access DOM Element</p>
                 <input ref={inputRef} />
                 <button onClick={handleFocus}> Focus</button>
             </div>
 
             <div>
-                <h2> Store Previous Value</h2>
-                <h2>Current: {count}</h2>
-                <h2>Previous: {prevCount.current}</h2>
+                <h2 className="text-2xl font-bold text-gray-700"> Store Previous Value</h2>
+                <h2 className="text-2xl font-bold text-gray-700">Current: {count}</h2>
+                <h2 className="text-2xl font-bold text-gray-700">Previous: {prevCount.current}</h2>
 
                 <button onClick={() => setCount(prev => prev + 1)}>
                     Increment
                 </button>
             </div>
             <div>
-                <p>2. Store Previous Value</p>
-                <p>3. Timer/Interval ID</p>
-                <p>AVoid Re-render(Mutable Storage)</p>
+                <p className="text-base text-gray-700 mb-4">2. Store Previous Value</p>
+                <p className="text-base text-gray-700 mb-4">3. Timer/Interval ID</p>
+                <p className="text-base text-gray-700 mb-4">AVoid Re-render(Mutable Storage)</p>
             </div>
             <div>
                 <h3>Common Interview Questions</h3>
@@ -129,7 +129,7 @@ function UseRef() {
                 </div>
 
 
-                <p>
+                <p className="text-base text-gray-700 mb-4">
                     <h3>Common Mistakes ❌</h3>
                     ❌ Expecting re-render<br />
                     ref.current = 5; //<br />
@@ -145,7 +145,7 @@ function UseRef() {
 
                     👉 Use useState when UI needs update<br />
                 </p>
-                <p>
+                <p className="text-base text-gray-700 mb-4">
                     <h3>Cheat Sheet 🚀</h3>
                     const ref = useRef(value)<br />
 
@@ -155,7 +155,7 @@ function UseRef() {
                     Used for DOM + mutable values<br />
                 </p>
 
-                <p>
+                <p className="text-base text-gray-700 mb-4">
                     <h3>Best Practices ⭐</h3>
 
                     ✔ Use for DOM operations<br />
@@ -165,7 +165,7 @@ function UseRef() {
                 </p>
 
 
-                <p>
+                <p className="text-base text-gray-700 mb-4">
                     <h3>When to Use useRef</h3>
 
                     👉 Use when:
@@ -175,7 +175,7 @@ function UseRef() {
                     Store timers / previous values<br />
                 </p>
 
-                <p>
+                <p className="text-base text-gray-700 mb-4">
                     <h3>Real-Life Examples</h3>
                     Focus input field<br />
                     Scroll to element<br />
@@ -183,7 +183,7 @@ function UseRef() {
                     Track previous state<br />
                 </p>
 
-                <p>
+                <p className="text-base text-gray-700 mb-4">
                     <h3>Final Summary</h3>
 
                     👉 useRef = mutable storage + DOM access <br />

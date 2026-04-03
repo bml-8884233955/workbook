@@ -24,8 +24,8 @@ function UseCallback() {
     return (
         <>
             <h3> useCallback</h3>
-            <h2> Why useCallback</h2>
-            <p> In react , functions are recreated on every render:</p>
+            <h2 className="text-2xl font-bold text-gray-700"> Why useCallback</h2>
+            <p className="text-base text-gray-700 mb-4"> In react , functions are recreated on every render:</p>
             this causes
             <ul>
                 <li>

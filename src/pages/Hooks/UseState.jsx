@@ -27,22 +27,22 @@ function UseState() {
 
     return (
         <>
-            <p> use State</p>
+            <p className="text-base text-gray-700 mb-4"> use State</p>
             <h3> What is useSTate?</h3>
-            <p> useState ia a react hook to manage state in functional components</p>
-            <p> state = data that changes and re-renders UI </p>
+            <p className="text-base text-gray-700 mb-4"> useState ia a react hook to manage state in functional components</p>
+            <p className="text-base text-gray-700 mb-4"> state = data that changes and re-renders UI </p>
 
-            <p> use state example</p>
+            <p className="text-base text-gray-700 mb-4"> use state example</p>
             <button onClick={() => setCount(count + 1)}> Increment</button >
 
-            <p>{count}</p>
+            <p className="text-base text-gray-700 mb-4">{count}</p>
 
-            <p> we can't update "count" as that is immumtable state
+            <p className="text-base text-gray-700 mb-4"> we can't update "count" as that is immumtable state
 
                 count → read-only value
                 setCount → only way to update it
             </p>
-            <p>
+            <p className="text-base text-gray-700 mb-4">
                 What happens if you do this?
                 count = count + 1;
 
@@ -50,7 +50,7 @@ function UseState() {
                 UI won’t update
                 Breaks React’s internal system
             </p>
-            <p>
+            <p className="text-base text-gray-700 mb-4">
                 {`setCount(prev => prev + 1);`}
 
                 👉 Step by step:
@@ -60,12 +60,12 @@ function UseState() {
                 Your function runs → prev + 1
                 New value becomes 1
             </p>
-            <p>
+            <p className="text-base text-gray-700 mb-4">
                 setCount(count + 1);
 
                 👉 This works… BUT can cause bugs in some cases
             </p>
-            <p>
+            <p className="text-base text-gray-700 mb-4">
                 setCount(count + 1);
                 setCount(count + 1);
 
@@ -95,12 +95,12 @@ function UseState() {
                 </li>
             </ul>
 
-            <h2>
+            <h2 className="text-2xl font-bold text-gray-700">
                 Types of State
             </h2>
             <ul>
                 <li>
-                    <p>Primitive</p>
+                    <p className="text-base text-gray-700 mb-4">Primitive</p>
                     <pre>
                         const [name, setName] = useState("");
                         const [count, setCount] = useState(0);
@@ -109,7 +109,7 @@ function UseState() {
 
                 </li>
                 <li>
-                    <p>Object State</p>
+                    <p className="text-base text-gray-700 mb-4">Object State</p>
                     <pre>
                         const [user, setUser] = useState(&#123; name: "", age: 0 &#125;);
                         setUser(&#123; ...user, name: "john" &#125;);
@@ -120,14 +120,14 @@ function UseState() {
             <ul>
                 <h3>Code Template</h3>
                 <li>
-                    <p>Toggle Template</p>
+                    <p className="text-base text-gray-700 mb-4">Toggle Template</p>
                     <pre><code>
                         {` const [isOpen, setIsOpen] = useState(false);
 const toggle = () => setIsOpen((prev) =>; !prev); `}
                     </code></pre>
                 </li>
                 <li>
-                    <p> Form Input</p>
+                    <p className="text-base text-gray-700 mb-4"> Form Input</p>
                     <pre>
                         <code>
                             {formInput}
@@ -149,7 +149,7 @@ const toggle = () => setIsOpen((prev) =>; !prev); `}
                     <pre><code>
                         &lt;button onClick=&#123;increment&#125;&gt;&lt;/button&gt;
                     </code></pre>
-                    <p>
+                    <p className="text-base text-gray-700 mb-4">
                         Summary
                         <pre><code>
                             onClick=&#123;fn&#125; → pass function ✅
@@ -159,7 +159,7 @@ const toggle = () => setIsOpen((prev) =>; !prev); `}
                     </p>
                 </li>
                 <li>
-                    <p>Counter</p>
+                    <p className="text-base text-gray-700 mb-4">Counter</p>
                     <pre>
                         <pre><code>
                             const [count, setCounter] = useState(0);
@@ -171,7 +171,7 @@ const toggle = () => setIsOpen((prev) =>; !prev); `}
                     </pre>
                 </li>
                 <li>
-                    <p>Object Update</p>
+                    <p className="text-base text-gray-700 mb-4">Object Update</p>
                     {/* const [user, setUser] = useState({name: "", age: 0 });
 
                     setUser((prev) => ({
@@ -180,7 +180,7 @@ const toggle = () => setIsOpen((prev) =>; !prev); `}
                     })); */}
                 </li>
                 <li>
-                    <p>Array Add / Remove</p>
+                    <p className="text-base text-gray-700 mb-4">Array Add / Remove</p>
                     {/* // Add
                     setItems((prev) => [...prev, newItem]);
 
@@ -189,7 +189,7 @@ const toggle = () => setIsOpen((prev) =>; !prev); `}
 
                 </li>
             </ul>
-            <p>
+            <p className="text-base text-gray-700 mb-4">
                 10. Tips ⭐
 
                 ✔ Use multiple small states instead of one big object

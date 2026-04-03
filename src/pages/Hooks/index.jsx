@@ -7,11 +7,11 @@ function Index() {
     const navigateToPage = (path) => {
         navigate(path);
     }
-    const cardObj = [{
-        title: '',
-        description: '',
-        url: ''
-    }]
+    // const cardObj = [{
+    //     title: '',
+    //     description: '',
+    //     url: ''
+    // }]
 
     const userData = {
         user: { name: "Ramesh", role: "Admin" },
@@ -19,7 +19,7 @@ function Index() {
     };
     return (
         <>
-            <p>Hooks</p>
+            <p className="text-base text-gray-700 mb-4">Hooks</p>
             <div style={{ display: "flex", gap: "20px" }}>
                 <Card title="useEffect" description="Learn useEffect" cardClicked={() => navigateToPage("/hooks/use-effect")} />
                 <Card title="useState" description="Learn useState" cardClicked={() => navigateToPage("/hooks/use-state")} />

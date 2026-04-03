@@ -80,11 +80,11 @@ function UseEffect() {
         <div>
             <h1>useEffect Hook</h1>
 
-            <h2>Status: {isActive ? "Active 🟢" : "Logged out 🔴"}</h2>
+            <h2 className="text-2xl font-bold text-gray-700">Status: {isActive ? "Active 🟢" : "Logged out 🔴"}</h2>
 
-            <p> useEffect is a  React Hook used to handle side effects in functional components</p>
+            <p className="text-base text-gray-700 mb-4"> useEffect is a  React Hook used to handle side effects in functional components</p>
 
-            <p> Examples of side effects </p>
+            <p className="text-base text-gray-700 mb-4"> Examples of side effects </p>
             <ul>
                 <li> Api Calls</li>
                 <li> Dom Manipulation</li>
@@ -92,7 +92,7 @@ function UseEffect() {
                 <li> Event Listeners</li>
                 <li> Logging</li>
             </ul>
-            <p> Basic Syntax</p>
+            <p className="text-base text-gray-700 mb-4"> Basic Syntax</p>
             <div>
                 <ul>
                     <li>This runs after render</li>
@@ -162,7 +162,7 @@ useEffect(() => {}, [state])   → run on state change
 useEffect(() => {})            → run always
 
 return () => {}                → cleanup */}
-            <h2>10. Real - Life Use Cases</h2>
+            <h2 className="text-2xl font-bold text-gray-700">10. Real - Life Use Cases</h2>
             <ul>
                 <li>Fetch API data</li>
                 <li>Track user actions</li>
@@ -171,7 +171,7 @@ return () => {}                → cleanup */}
                 <li>Subscriptions</li>
             </ul>
 
-            <h2>11. Best Practices</h2>
+            <h2 className="text-2xl font-bold text-gray-700">11. Best Practices</h2>
             <ul>
                 <li>✔ Keep effects small</li>
                 <li>✔ Use multiple effects</li>
@@ -180,11 +180,11 @@ return () => {}                → cleanup */}
                 <li>✔ Don’t overuse useEffect</li>
             </ul>
 
-            <h2>Final Summary</h2>
-            <p>👉 useEffect = handle side effects</p>
-            <p>👉 Dependency array = control execution</p>
-            <p>👉 Cleanup = avoid leaks</p>
-            <p>👉 Use multiple effects for clarity</p>
+            <h2 className="text-2xl font-bold text-gray-700">Final Summary</h2>
+            <p className="text-base text-gray-700 mb-4">👉 useEffect = handle side effects</p>
+            <p className="text-base text-gray-700 mb-4">👉 Dependency array = control execution</p>
+            <p className="text-base text-gray-700 mb-4">👉 Cleanup = avoid leaks</p>
+            <p className="text-base text-gray-700 mb-4">👉 Use multiple effects for clarity</p>
 
 
             < button onClick={() => setCount(count + 1)}> Click + </button >

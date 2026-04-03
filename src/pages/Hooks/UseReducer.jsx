@@ -22,9 +22,9 @@ function UseReducer() {
 
     return (
         <>
-            <h2>What is useReducer</h2>
-            <p> <i>useReducer</i> is a hook to manage complex state logic </p>
-            <p>It is alternative to :</p>
+            <h2 className="text-2xl font-bold text-gray-700">What is useReducer</h2>
+            <p className="text-base text-gray-700 mb-4"> <i>useReducer</i> is a hook to manage complex state logic </p>
+            <p className="text-base text-gray-700 mb-4">It is alternative to :</p>
             <li> useState(for Simple state)</li>
             <li> Works like Redux(mini version)</li>
 
@@ -34,7 +34,7 @@ function UseReducer() {
             <li>Dependent state changes</li>
             <li>Form handling</li>
             <li> Form transitions</li>
-            <p>Basic Syntax</p>
+            <p className="text-base text-gray-700 mb-4">Basic Syntax</p>
             {` const [state, dispatch] = useReducer(reducer, initialValue)`}
             <table>
                 <thead>
@@ -66,7 +66,7 @@ function UseReducer() {
             <h3> Reducer  use case</h3>
 
             <div>
-                <h2>{state.count}</h2>
+                <h2 className="text-2xl font-bold text-gray-700">{state.count}</h2>
                 <button onClick={() => dispatch({ type: "INCREMENT" })}>
                     +
                 </button>
@@ -78,7 +78,7 @@ function UseReducer() {
                 </button>
             </div>
 
-            <p>
+            <p className="text-base text-gray-700 mb-4">
                 13. Interview Questions
                 ❓ Q1: What is useReducer?
 

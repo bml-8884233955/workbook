@@ -23,15 +23,15 @@ const CustomHook = () => {
         <>
             {/* {data && data[0].name} */}
             {loading ? (
-                <p> Loading...</p>
+                <p className="text-base text-gray-700 mb-4"> Loading...</p>
             ) : (
                 data.map((user) => (
                     <p key={user.id}>{user.name}</p>
                 ))
             )}
-            <h2> Custom Hook </h2>
+            <h2 className="text-2xl font-bold text-gray-700"> Custom Hook </h2>
             <h3>What is Custom hook</h3>
-            <p> A custom hook is a resusable function that :
+            <p className="text-base text-gray-700 mb-4"> A custom hook is a resusable function that :
                 <ul>
                     <li> uses React hooks(useState, useEffect)</li>
                     <li>starts with use</li>
@@ -39,7 +39,7 @@ const CustomHook = () => {
                 </ul>
             </p>
             <h3>Why custom hooks</h3>
-            <p> some logic repeated in multiple components</p>
+            <p className="text-base text-gray-700 mb-4"> some logic repeated in multiple components</p>
             {`useEffect(() => {
                  fetchData();
             }, []);`}
@@ -49,8 +49,8 @@ const CustomHook = () => {
                 <li>Better maintainability</li>
             </ul>
 
-            <p>  Custom hook example</p>
-            <h2>Count: {count}</h2>
+            <p className="text-base text-gray-700 mb-4">  Custom hook example</p>
+            <h2 className="text-2xl font-bold text-gray-700">Count: {count}</h2>
             <button onClick={increment}> + </button>
             <button onClick={decrement}> - </button>
             <button onClick={reset}>Reset</button>

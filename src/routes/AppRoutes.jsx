@@ -13,7 +13,11 @@ import UseMemo from "../pages/Hooks/UseMemo";
 import UseCallback from "../pages/Hooks/UseCallback";
 import CustomHook from "../pages/Hooks/CustomHook";
 import UseReducer from "../pages/Hooks/UseReducer";
+import ControlledForm from "../pages/Forms/ControlledForm";
+import UncontrolledForm from "../pages/Forms/UncontrolledfForm";
 import Styling from "../pages/Styling/Styling";
+import LoginForm from "../pages/Forms/LoginForm";
+import PaymentForm from "../pages/Forms/PaymentForm";
 
 
 function AppRoutes() {
@@ -35,7 +39,12 @@ function AppRoutes() {
                         <Route path="use-reducer" element={<UseReducer />} />
                     </Route>
                     <Route path="props" element={<PropsDemo />} />
-                    <Route path="forms" element={<Form />} />
+                    <Route path="forms" element={<Form />}>
+                        <Route path="controled-form" element={<ControlledForm />} />
+                        <Route path="uncontroled-form" element={<UncontrolledForm />} />
+                        <Route path="login-form" element={<LoginForm />} />
+                        <Route path="payment-form" element={<PaymentForm />} />
+                    </Route>
                     <Route path="style" element={<Styling />} />
                 </Route>
                 <Route path="*" element={<NotFound />} />
