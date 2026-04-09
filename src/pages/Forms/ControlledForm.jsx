@@ -37,7 +37,7 @@ const ControlledForm = () => {
 
     return (
         <>
-            <h3 class="text-center text-2xl font-bold"> Controlled Form</h3>
+            <h2 class="text-center text-2xl font-bold"> Controlled Form</h2>
             <div className="grid max-w-md mx-auto mt-10">
                 <form onSubmit={handleSubmit}>
                     <div className="flex flex-col">

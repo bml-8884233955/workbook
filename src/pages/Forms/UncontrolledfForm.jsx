@@ -22,7 +22,7 @@ const UncontrolledForm = () => {
 
     return (
         <>
-            <h3>What is an UncontrolledForm</h3>
+            <h2>What is an UncontrolledForm</h2>
 
             <ul>
                 <li>

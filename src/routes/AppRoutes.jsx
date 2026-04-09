@@ -18,6 +18,9 @@ import UncontrolledForm from "../pages/Forms/UncontrolledfForm";
 import Styling from "../pages/Styling/Styling";
 import LoginForm from "../pages/Forms/LoginForm";
 import PaymentForm from "../pages/Forms/PaymentForm";
+import RoutePage from "../pages/Routing/RoutePage";
+import ProductPage from "../pages/Routing/ProductPage";
+import ProductDetail from "../pages/Routing/ProductDetail";
 
 
 function AppRoutes() {
@@ -46,10 +49,14 @@ function AppRoutes() {
                         <Route path="payment-form" element={<PaymentForm />} />
                     </Route>
                     <Route path="style" element={<Styling />} />
+                    <Route path="routePage" element={<RoutePage />}>
+                        <Route index element={<ProductPage />} />
+                        <Route path="product/:id" element={<ProductDetail />} />
+                    </Route>
                 </Route>
                 <Route path="*" element={<NotFound />} />
             </Routes>
-        </BrowserRouter>
+        </BrowserRouter >
     );
 }
 

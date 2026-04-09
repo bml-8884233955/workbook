@@ -30,7 +30,7 @@ const CustomHook = () => {
                 ))
             )}
             <h2 className="text-2xl font-bold text-gray-700"> Custom Hook </h2>
-            <h3>What is Custom hook</h3>
+            <h2>What is Custom hook</h2>
             <p className="text-base text-gray-700 mb-4"> A custom hook is a resusable function that :
                 <ul>
                     <li> uses React hooks(useState, useEffect)</li>

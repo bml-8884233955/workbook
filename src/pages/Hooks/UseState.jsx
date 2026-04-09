@@ -27,8 +27,7 @@ function UseState() {
 
     return (
         <>
-            <p className="text-base text-gray-700 mb-4"> use State</p>
-            <h3> What is useSTate?</h3>
+            <h2> What is useState?</h2>
             <p className="text-base text-gray-700 mb-4"> useState ia a react hook to manage state in functional components</p>
             <p className="text-base text-gray-700 mb-4"> state = data that changes and re-renders UI </p>
 
@@ -102,17 +101,19 @@ function UseState() {
                 <li>
                     <p className="text-base text-gray-700 mb-4">Primitive</p>
                     <pre>
-                        const [name, setName] = useState("");
-                        const [count, setCount] = useState(0);
-                        const[isOpen, setIsopen] = useState(false);
+                        <code>
+                            {`const [name, setName] = useState("");
+const [count, setCount] = useState(0);
+const[isOpen, setIsopen] = useState(false);`}
+                        </code>
                     </pre>
 
                 </li>
                 <li>
                     <p className="text-base text-gray-700 mb-4">Object State</p>
                     <pre>
-                        const [user, setUser] = useState(&#123; name: "", age: 0 &#125;);
-                        setUser(&#123; ...user, name: "john" &#125;);
+                        <p>const [user, setUser] = useState(&#123; name: "", age: 0 &#125;);</p>
+                        <p>setUser(&#123; ...user, name: "john" &#125;);</p>
                     </pre>
                 </li>
             </ul>
@@ -136,25 +137,29 @@ const toggle = () => setIsOpen((prev) =>; !prev); `}
 
                     <pre>
                         <code>
-                            &lt;button onClick=&#123;() =&gt; handleClick(5)&#125;&gt;&lt;/button&gt;
+                            {`
+                            <button onClick={() => handleClick(5)}</button>;
 
-                            onClick=&#123;handleClick(5)&#125; ❌ (runs immediately)
+                            onClick= {handleClick(5)} ❌ (runs immediately)
 
                             Alternative (when no arguments)
+                            `}
                         </code>
                     </pre>
 
                     If no arguments needed:
 
                     <pre><code>
-                        &lt;button onClick=&#123;increment&#125;&gt;&lt;/button&gt;
+                        {`<button onClick={increment}</button>;`}
                     </code></pre>
                     <p className="text-base text-gray-700 mb-4">
                         Summary
                         <pre><code>
-                            onClick=&#123;fn&#125; → pass function ✅
-                            onClick=&#123;fn()&#125; → execute immediately ❌
-                            onClick=&#123;() =&gt; fn()&#125; → safe execution on click ✅
+                            {`
+                            onClick={fn} → pass function ✅ 
+                            onClick={fn()} → execute immediately ❌ 
+                            onClick={() => fn()} → safe execution on click ✅
+                        `}
                         </code></pre>
                     </p>
                 </li>
@@ -162,22 +167,26 @@ const toggle = () => setIsOpen((prev) =>; !prev); `}
                     <p className="text-base text-gray-700 mb-4">Counter</p>
                     <pre>
                         <pre><code>
-                            const [count, setCounter] = useState(0);
+                            {`
+                             const [count, setCounter] = useState(0);
+                            const [count, setCounter] = useState(0); 
+                            <button onClick={() => setCount(prev => prev + 1)}> Increment </button>
+`}
 
-                            &lt;button onClick=&#123;() =&gt; setCount(prev =&gt; prev + 1)&#125;&gt;
-                            Increment
-                            &lt;/button&gt;
                         </code></pre>
                     </pre>
                 </li>
                 <li>
                     <p className="text-base text-gray-700 mb-4">Object Update</p>
-                    {/* const [user, setUser] = useState({name: "", age: 0 });
 
-                    setUser((prev) => ({
+                    <pre><code>
+                        {`
+                        const [user, setUser] = useState({name: "", age: 0 });
+                         setUser((prev) => ({
                         ...prev,
                         name: "John",
-                    })); */}
+                    }));`}
+                    </code></pre>
                 </li>
                 <li>
                     <p className="text-base text-gray-700 mb-4">Array Add / Remove</p>
@@ -188,7 +197,7 @@ const toggle = () => setIsOpen((prev) =>; !prev); `}
                     setItems((prev) => prev.filter((item) => item !== id)); */}
 
                 </li>
-            </ul>
+            </ul >
             <p className="text-base text-gray-700 mb-4">
                 10. Tips ⭐
 

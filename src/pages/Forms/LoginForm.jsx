@@ -50,7 +50,7 @@ const LoginForm = () => {
     }
     return (
         <>
-            <h3 class="text-center text-2xl font-bold">Login Form</h3>
+            <h2 class="text-center text-2xl font-bold">Login Form</h2>
             <div className="space-y-8 max-w-md mx-auto mt-10">
                 <form onSubmit={handleSubmit} className="space-y-4">
                     {/* Name */}

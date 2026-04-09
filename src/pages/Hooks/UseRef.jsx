@@ -35,7 +35,7 @@ function UseRef() {
                 <ul>
                     <li>
                         Access Dom elements Directly
-                    </li>
+                    </li>x
                     <li>
                         Store mutable values that do NOT cause re-render
                     </li>

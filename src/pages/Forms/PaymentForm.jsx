@@ -14,9 +14,9 @@ const PaymentForm = () => {
 
     return (
         <>
-            <h3 class="text-center text-2xl font-bold">
+            <h2 class="text-center text-2xl font-bold">
                 Payment Form
-            </h3>
+            </h2>
             <div className="max-w-md mx-auto mt-10">
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                     {/* Name */}

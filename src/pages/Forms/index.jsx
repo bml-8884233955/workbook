@@ -12,8 +12,8 @@ function Index() {
 
     return (
         <>
-            <h2> Form</h2>
-            <p> What is React Form</p>
+            <h2> What is React Form</h2>
+            <h3> Form</h3>
             <ul>
                 <li>
                     collect user input (name, email, password,etc.)

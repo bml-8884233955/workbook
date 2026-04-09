@@ -9,6 +9,7 @@ function Sidebar() {
                 <li><Link to="/props">Props</Link></li>
                 <li><Link to="/forms">Forms</Link></li>
                 <li><Link to="/style">Style</Link></li>
+                <li><Link to="/routePage">Route</Link></li>
             </ul>
         </div>
     );

@@ -8,7 +8,7 @@ function UseContext() {
             <h2 className="text-2xl font-bold text-gray-700"> What is useContext?</h2>
             <h4>Context Value printed :::: {user.user.name}</h4>
             <p className="text-base text-gray-700 mb-4"> useContext is a React Hook used to access data from a Context without prop drilling
-                It allows yiu to share data globally across components
+                It allows you to share data globally across components
             </p>
 
             <h3>When to Use Context API</h3>

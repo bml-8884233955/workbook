@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 function UseEffect() {
     const [count, setCount] = useState();
+    // const [countNum, setCountNum] = useState();
     const [isActive, setIsActive] = useState();
 
     // Run once (component did mount)
@@ -21,19 +22,19 @@ function UseEffect() {
 
     // Cleanup Effect
     useEffect(() => {
-        const timer = setInterval(() => {
-            console.log("Running...");
-        }, 1000);
+        // const timer = setInterval(() => {
+        //     console.log("Running...");
+        // }, 1000);
 
 
         // setTimeout(() => {
         //     clearInterval(timer);
         // }, 5000); // stops after 5 seconds
 
-        return () => {
-            console.log("Cleanup - stopping interval");
-            clearInterval(timer);
-        }
+        // return () => {
+        //     console.log("Cleanup - stopping interval");
+        //     clearInterval(timer);
+        // }
     }, []);
 
     // API Call Template
@@ -46,6 +47,15 @@ function UseEffect() {
         };
         fetchData();
     }, []);
+
+
+    // Infinite Loop
+    // useEffect(() => {
+    //     console.log(countNum);
+    //     setCountNum(countNum + 1);
+
+    // }, [countNum]);
+
 
     // Event Listner Template
 
@@ -78,9 +88,9 @@ function UseEffect() {
 
     return (
         <div>
-            <h1>useEffect Hook</h1>
+            <h2>useEffect Hook</h2>
 
-            <h2 className="text-2xl font-bold text-gray-700">Status: {isActive ? "Active 🟢" : "Logged out 🔴"}</h2>
+            <h3 className="text-2xl font-bold text-gray-700">Status: {isActive ? "Active 🟢" : "Logged out 🔴"}</h3>
 
             <p className="text-base text-gray-700 mb-4"> useEffect is a  React Hook used to handle side effects in functional components</p>
 
@@ -99,20 +109,21 @@ function UseEffect() {
                     <li>Executes after component renders</li>
                     <li>Dependency array controls execution</li>
                 </ul>
+                <div>
+
+                    <p><b>[]</b> - runs once (on mount)</p>
+                    <p><b>[value]</b> - runs when value changes</p>
+                    <p><b>no array</b> - runs on every render</p>
+                </div>
 
                 <ul>
-                    <li><b>[]</b> - runs once (on mount)</li>
-                    <li><b>[value]</b> - runs when value changes</li>
-                    <li><b>no array</b> - runs on every render</li>
-                </ul>
-
-                <ul>
+                    <p>Important points</p>
                     <li>Cleanup function</li>
                     <li>Avoid infinite loops</li>
                     <li>Multiple useEffect allowed</li>
                     <li>Execution Flow</li>
                 </ul>
-            </div>
+            </div >
 
             <div class="section">
                 <h3>Common Interview Questions + Answers</h3>
@@ -132,36 +143,40 @@ function UseEffect() {
                 <p class="question">Q5: Can we use multiple useEffect?</p>
                 <p class="answer">👉 Yes, recommended for separation of logic.</p>
             </div>
+            <pre><code>
+                🔹 8. Common Mistakes ❌
+                ❌ Missing dependency
 
-            {/* 🔹 8. Common Mistakes ❌
-❌ Missing dependency
-useEffect(() => {
+                {` useEffect(() => {
   console.log(count);
 }, []); // ❌
+`}
+                👉 Fix:
+                {`}, [count]);`}
 
-👉 Fix:
-
-}, [count]);
-❌ Infinite loop
-useEffect(() => {
-  setCount(count + 1);
-}, [count]); // ❌
-❌ Async directly in useEffect
-useEffect(async () => { ❌
+                ❌ Infinite loop
+                {`useEffect(() => {
+                    setCount(count + 1);
+}, [count]); // `}❌
+                ❌ Async directly in useEffect
+                {`useEffect(async () => { ❌
 });
-
-👉 Fix:
-
+`}
+                👉 Fix:
+                {`
 useEffect(() => {
-  const fetchData = async () => {};
-  fetchData();
+  const fetchData = async () => { };
+                fetchData();
 }, []);
-🔹 9. Cheat Sheet 🚀
-useEffect(() => {}, [])        → run once
-useEffect(() => {}, [state])   → run on state change
-useEffect(() => {})            → run always
+`}
+                🔹 9. Cheat Sheet 🚀
+                {`useEffect(() => { }, [])        → run once
+                    useEffect(() => { }, [state])   → run on state change
+                    useEffect(() => { })            → run always
 
-return () => {}                → cleanup */}
+                    return () => { }                → cleanup 
+                    `}
+            </code></pre>
             <h2 className="text-2xl font-bold text-gray-700">10. Real - Life Use Cases</h2>
             <ul>
                 <li>Fetch API data</li>
@@ -172,13 +187,13 @@ return () => {}                → cleanup */}
             </ul>
 
             <h2 className="text-2xl font-bold text-gray-700">11. Best Practices</h2>
-            <ul>
-                <li>✔ Keep effects small</li>
-                <li>✔ Use multiple effects</li>
-                <li>✔ Always clean up</li>
-                <li>✔ Avoid unnecessary dependencies</li>
-                <li>✔ Don’t overuse useEffect</li>
-            </ul>
+            <div>
+                <p>✔ Keep effects small</p>
+                <p>✔ Use multiple effects</p>
+                <p>✔ Always clean up</p>
+                <p>✔ Avoid unnecessary dependencies</p>
+                <p>✔ Don’t overuse useEffect</p>
+            </div>
 
             <h2 className="text-2xl font-bold text-gray-700">Final Summary</h2>
             <p className="text-base text-gray-700 mb-4">👉 useEffect = handle side effects</p>
@@ -187,7 +202,7 @@ return () => {}                → cleanup */}
             <p className="text-base text-gray-700 mb-4">👉 Use multiple effects for clarity</p>
 
 
-            < button onClick={() => setCount(count + 1)}> Click + </button >
+            < button onCpck={() => setCount(count + 1)}> Click + </button >
         </div >
 
     );

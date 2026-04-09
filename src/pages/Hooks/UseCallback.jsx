@@ -23,8 +23,8 @@ function UseCallback() {
 
     return (
         <>
-            <h3> useCallback</h3>
-            <h2 className="text-2xl font-bold text-gray-700"> Why useCallback</h2>
+            <h2> useCallback</h2>
+            <h3 className="text-2xl font-bold text-gray-700"> Why useCallback</h3>
             <p className="text-base text-gray-700 mb-4"> In react , functions are recreated on every render:</p>
             this causes
             <ul>
@@ -55,91 +55,135 @@ function UseCallback() {
                     Expecially in child components
                 </li>
             </ul>
+            <p>  Code Templates 🚀</p>
 
-            Code Templates 🚀
-            ✅ Basic Template
-            {`const handleClick = useCallback(() => {
+            <p>✅ Basic Template
+                {`const handleClick = useCallback(() => {
                 console.log("Click");
 }, []);`}
-            ✅ With Dependency
-            {`const handleClick = useCallback(() => {
+            </p>
+            <p>
+                ✅ With Dependency
+                {`const handleClick = useCallback(() => {
                 console.log(count);
 }, [count]);`}
-            ✅ Passing to Child
-            {` <Child onClick={handleClick} /> `}
-            ✅ With React.memo
-            {`const Child = React.memo(({onClick}) => {
+            </p>
+            <p>
+                ✅ Passing to Child
+                {` <Child onClick={handleClick} /> `}
+            </p>
+            <p>
+                ✅ With React.memo
+                {`const Child = React.memo(({onClick}) => {
                 console.log("Child rendered");
             return <button onClick={onClick}>Click</button>;
 });`}
-            🔹 7. useMemo vs useCallback ⭐
-            Feature	useMemo	useCallback
-            Returns	Value	Function
-            Use case	Expensive calc	Prevent re-render
-            🔹 8. Common Interview Questions
-            ❓ Q1: What is useCallback?
+            </p>
+            <p>
+                7. useMemo vs useCallback ⭐
 
-            👉 Hook to memoize functions.
+                Feature	useMemo	useCallback
 
-            ❓ Q2: Why use it?
+                Returns	Value	Function
+                Use case	Expensive calc	Prevent re-render
+            </p>
 
-            👉 To prevent unnecessary re-renders.
+            <p>8. Common Interview Questions</p>
+            <ul>
+                <li>
+                    ❓ Q1: What is useCallback?
 
-            ❓ Q3: Difference from useMemo?
+                    👉 Hook to memoize functions.
 
-            👉
+                </li>
+                <li>
+                    ❓ Q2: Why use it?
 
-            useMemo → value
-            useCallback → function
-            ❓ Q4: Does it improve performance always?
+                    👉 To prevent unnecessary re-renders.
+                </li>
+                <li>
+                    ❓ Q3: Difference from useMemo?
 
-            👉 ❌ No, only in specific cases
+                    👉 useMemo → value
+                    useCallback → function
+                </li>
+                <li>
+                    ❓ Q4: Does it improve performance always?
 
-            ❓ Q5: When to use it?
+                    👉 ❌ No, only in specific cases
+                </li>
+                <li>
+                    ❓ Q5: When to use it?
 
-            👉 When passing functions to child components
+                    👉 When passing functions to child components
+                </li>
+            </ul>
+            <p>9. Common Mistakes ❌</p>
 
-            🔹 9. Common Mistakes ❌
-            ❌ Overusing useCallback
-            {`const fn = useCallback(() => count + 1, [count]);`} // ❌ unnecessary
-            ❌ Missing dependencies
-            {`useCallback(() => {
+            <ul>
+                <li>
+                    ❌ Overusing useCallback
+                    {`const fn = useCallback(() => count + 1, [count]);`} // ❌ unnecessary
+                </li>
+                <li>
+                    ❌ Missing dependencies
+                    {`useCallback(() => {
                 console.log(count);
 }, []); `}// ❌ bug
-            ❌ Using without React.memo
+                </li>
+                <li>
+                    ❌ Using without React.memo
 
-            👉 No benefit if child always re-renders
+                    👉 No benefit if child always re-renders
+                </li>
+            </ul>
 
-            🔹 10. Real-Life Use Cases 🔥
-            ✅ Button handlers in large apps
-            ✅ Passing callbacks to child components
-            ✅ Preventing re-renders in lists
-            ✅ Optimizing forms
-            🔹 11. Cheat Sheet 🚀
-            {`useCallback(() => fn, [deps])`}
+            <p> 10. Real-Life Use Cases 🔥</p>
 
-            Memoizes function
-            Prevents re-creation
-            Used with React.memo
-            🔹 12. Best Practices ⭐
+            <ul>
+                <li>
+                    ✅ Button handlers in large apps
+                    ✅ Passing callbacks to child components
+                    ✅ Preventing re-renders in lists
+                    ✅ Optimizing forms
+                </li>
+            </ul>
 
-            ✔ Use only when needed
-            ✔ Combine with React.memo
-            ✔ Always include dependencies
-            ✔ Avoid premature optimization
+            <p>
+                11. Cheat Sheet 🚀
+                {`useCallback(() => fn, [deps])`}
 
-            🔹 13. Real Example (Best Pattern) 🔥
+                Memoizes function
+                Prevents re-creation
+                Used with React.memo
+            </p>
+
+            <p>12. Best Practices ⭐</p>
+            <ul>
+                <li>
+                    ✔ Use only when needed
+                    ✔ Combine with React.memo
+                    ✔ Always include dependencies
+                    ✔ Avoid premature optimization
+
+                </li>
+            </ul>
+
+            <p>Real Example (Best Pattern) 🔥</p>
             {`const handleAdd = useCallback(() => {
                 dispatch({ type: "ADD_ITEM" });
 }, [dispatch]);
 
             return <Child onAdd={handleAdd} />;`}
-            🔹 Final Summary
-
-            👉 useCallback = memoize function
-            👉 Prevents unnecessary re-renders
-            👉 Works best with React.memo
-            👉 Don’t overuse
+            <h4> Final Summary</h4>
+            <ul>
+                <li>
+                    👉 useCallback = memoize function
+                    👉 Prevents unnecessary re-renders
+                    👉 Works best with React.memo
+                    👉 Don’t overuse
+                </li>
+            </ul>
         </>
     )
 }
