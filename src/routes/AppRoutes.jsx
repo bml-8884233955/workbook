@@ -21,6 +21,10 @@ import PaymentForm from "../pages/Forms/PaymentForm";
 import RoutePage from "../pages/Routing/RoutePage";
 import ProductPage from "../pages/Routing/ProductPage";
 import ProductDetail from "../pages/Routing/ProductDetail";
+import ApiPage from "../pages/Api/ApiPage";
+import Pagination from "../pages/Api/Pagination";
+import FetchingData from "../pages/Api/FetchingData";
+import Loading from "../pages/Api/Loading";
 
 
 function AppRoutes() {
@@ -52,6 +56,11 @@ function AppRoutes() {
                     <Route path="routePage" element={<RoutePage />}>
                         <Route index element={<ProductPage />} />
                         <Route path="product/:id" element={<ProductDetail />} />
+                    </Route>
+                    <Route path="api" element={<ApiPage />}>
+                        <Route index element={<FetchingData />} />
+                        <Route path="pagination" element={<Pagination />} />
+                        <Route path="loading" element={<Loading />} />
                     </Route>
                 </Route>
                 <Route path="*" element={<NotFound />} />

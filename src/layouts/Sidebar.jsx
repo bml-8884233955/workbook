@@ -10,6 +10,7 @@ function Sidebar() {
                 <li><Link to="/forms">Forms</Link></li>
                 <li><Link to="/style">Style</Link></li>
                 <li><Link to="/routePage">Route</Link></li>
+                <li><Link to="/api">API</Link></li>
             </ul>
         </div>
     );
