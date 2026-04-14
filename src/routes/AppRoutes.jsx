@@ -25,6 +25,8 @@ import ApiPage from "../pages/Api/ApiPage";
 import Pagination from "../pages/Api/Pagination";
 import FetchingData from "../pages/Api/FetchingData";
 import Loading from "../pages/Api/Loading";
+import CartPage from "../pages/Cart/CartPage";
+import ProductListPage from "../pages/Cart/ProductListPage";
 
 
 function AppRoutes() {
@@ -62,6 +64,8 @@ function AppRoutes() {
                         <Route path="pagination" element={<Pagination />} />
                         <Route path="loading" element={<Loading />} />
                     </Route>
+                    <Route path="product" element={<ProductListPage />} />
+                    <Route path="cart" element={<CartPage />} />
                 </Route>
                 <Route path="*" element={<NotFound />} />
             </Routes>

@@ -11,6 +11,9 @@ function Sidebar() {
                 <li><Link to="/style">Style</Link></li>
                 <li><Link to="/routePage">Route</Link></li>
                 <li><Link to="/api">API</Link></li>
+                <li><Link to="/product">Product</Link></li>
+                <li><Link to="/cart">Cart</Link></li>
+
             </ul>
         </div>
     );
