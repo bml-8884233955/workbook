@@ -25,7 +25,7 @@ const ProductListPage = () => {
 
 
             <h3>Add to cart process flow</h3>
-            <p> Component → dispatch(action) → reducer → store updated → UI re-renders </p>
+            <p> Component → dispatch(action) → Redux Slice → Store → UI updates </p>
         </>
     );
 }

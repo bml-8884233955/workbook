@@ -4,6 +4,7 @@ const CartPage = () => {
 
     const dispatch = useDispatch();
     const cartItems = useSelector(state => state.cart.items);
+    console.log(cartItems);
 
 
     return (
@@ -12,14 +13,14 @@ const CartPage = () => {
 
             <p> Total Items: {cartItems.length}</p>
 
-            {cartItems.map(item => {
-                <div key={item.id}>
-                    {item.name}
-                    <button onClick={() => dispatch(removeItem(item.id))}>
+            {cartItems.map(item => (
+                <div className="flex item-center gap-4 p-4" key={item.id} >
+                    <p className="text-gray-800"> {item.name}</p>
+                    < button className="bg-green-600 text-white px-2 py-2 rounded" onClick={() => dispatch(removeItem(item.id))}>
                         Remove
-                    </button>
-                </div>
-            })}
+                    </button >
+                </div >
+            ))}
         </>
     )
 }

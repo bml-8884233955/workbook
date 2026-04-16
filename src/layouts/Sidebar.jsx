@@ -13,6 +13,7 @@ function Sidebar() {
                 <li><Link to="/api">API</Link></li>
                 <li><Link to="/product">Product</Link></li>
                 <li><Link to="/cart">Cart</Link></li>
+                <li><Link to="/testing">Testing</Link></li>
 
             </ul>
         </div>

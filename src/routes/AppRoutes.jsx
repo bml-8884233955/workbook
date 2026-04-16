@@ -27,6 +27,7 @@ import FetchingData from "../pages/Api/FetchingData";
 import Loading from "../pages/Api/Loading";
 import CartPage from "../pages/Cart/CartPage";
 import ProductListPage from "../pages/Cart/ProductListPage";
+import TestingDemo from "../pages/Testing/TestingDemo";
 
 
 function AppRoutes() {
@@ -66,6 +67,7 @@ function AppRoutes() {
                     </Route>
                     <Route path="product" element={<ProductListPage />} />
                     <Route path="cart" element={<CartPage />} />
+                    <Route path="testing" element={<TestingDemo />} />
                 </Route>
                 <Route path="*" element={<NotFound />} />
             </Routes>
