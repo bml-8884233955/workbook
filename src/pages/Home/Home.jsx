@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Card from "../../components/Card";
-import { useDispatch, useSelector } from "react-redux";
-import { login, logout } from "../../features/user/userSlice";
+
 
 function Home() {
     const navigate = useNavigate();
@@ -9,17 +8,10 @@ function Home() {
         navigate(path);
     }
 
-    const dispatch = useDispatch();
-
-    const user = useSelector(state => state.user);
 
     return (
         <>
             <h1>Welcome to ReactLab 🚀</h1>
-            {user.isLoggedIn ? (<><p>Welocome, {user.name}</p>
-                <button onClick={() => dispatch(logout())}>Logout</button> </>)
-                : (<button onClick={() => dispatch(login("Bimal"))}>Login</button>)}
-
 
 
             <p>A place to practice and explore React concepts</p>
