@@ -1,4 +1,20 @@
-import { useCallback } from "react";
+import React, { useCallback, useState } from "react";
+
+
+const ProductItem = React.memo(({ product, onAdd }) => {
+    console.log("Rendered:", product.name);
+    return (
+        <>
+            <div>
+                <p>{product.page}</p>
+                <button onClick={() => onAdd(product)}>Add to Cart</button>
+            </div>
+
+        </>
+    );
+
+});
+
 
 function UseCallback() {
 
@@ -8,6 +24,8 @@ function UseCallback() {
         //function logic
 
     }, [dependencies]);
+
+
 
     const reactClickFunction = `function Parent() {
   const handleClick = () => {
@@ -20,6 +38,24 @@ function UseCallback() {
     const handleClick = useCallback(() => {
         console.log("Clicked");
     }, []);
+
+
+
+
+    const [cart, setCart] = useState([]);
+    const products = [
+        { id: 1, name: "iPhone" },
+        { id: 2, name: "Laptop" },
+        { id: 3, name: "Headphones" },
+    ]
+
+    const addToCart = useCallback((item) => {
+        setCart([...cart, item]);
+    }, []);
+
+
+
+
 
     return (
         <>
@@ -184,6 +220,17 @@ function UseCallback() {
                     👉 Don’t overuse
                 </li>
             </ul>
+
+
+
+            <h2> Products</h2>
+            {products.map((p) => (
+                <> <ProductItem key={p.id} product={p} onAdd={addToCart} /> </>
+            ))}
+
+
+
+
         </>
     )
 }

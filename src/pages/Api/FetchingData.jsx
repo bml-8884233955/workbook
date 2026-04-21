@@ -4,58 +4,61 @@ import useAxios from "./useAxios";
 
 function FetchingData() {
 
-    const [data, setData] = useState();
+  const [data, setData] = useState();
 
-    useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
-            .then(res => res.json())
-            .then(setData);
-    }, []);
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
+      .then(res => res.json())
+      .then(setData);
+  }, []);
+
+  // Custom hook for making service call
+
+  const { resdata, loading, error } = useFetch(
+    "https://jsonplaceholder.typicode.com/posts"
+  );
 
 
-    const { resdata, loading, error } = useFetch(
-        "https://jsonplaceholder.typicode.com/posts"
-    );
+  // Custom hook, making service call with Axios
 
+  const { dataObj, loadingData } = useAxios("https://jsonplaceholder.typicode.com/posts");
 
-    // const { data, loading } = useAxios("https://jsonplaceholder.typicode.com/posts");
+  return (
+    <>
+      <h3> Fetching Data</h3>
+      <p> React itself doses not fetch data</p>
+      <p>Browser API's or Libraries(axios) inside lifecycle (useEffect)</p>
 
-    return (
-        <>
-            <h3> Fetching Data</h3>
-            <p> React itself doses not fetch data</p>
-            <p>Browser API's or Libraries(axios) inside lifecycle (useEffect)</p>
-
-            <h4>Flow</h4>
-            <ul>
-                <li> Component mounts</li>
-                <li>API call is triggered</li>
-                <li>Data comes - stored in state</li>
-                <li>UI re-renders</li>
-            </ul>
-            <pre><code>
-                {` useEffect(()=>{
+      <h4>Flow</h4>
+      <ul>
+        <li> Component mounts</li>
+        <li>API call is triggered</li>
+        <li>Data comes - stored in state</li>
+        <li>UI re-renders</li>
+      </ul>
+      <pre><code>
+        {` useEffect(()=>{
         fetchData();
         }, [])`}
 
-            </code></pre>
+      </code></pre>
 
-            <p>
-                We use useEffect for API Calls , as React components render multiple times.
-                It will run on every render - Infinite calls
-            </p>
+      <p>
+        We use useEffect for API Calls , as React components render multiple times.
+        It will run on every render - Infinite calls
+      </p>
 
-            <h2> Products</h2>
-            {data && data.map(item => (
-                <p key={item.id}>{item.title}</p>
-            ))}
+      <h2> Products</h2>
+      {data && data.map(item => (
+        <p key={item.id}>{item.title}</p>
+      ))}
 
-            <h2> Custom Hook Data</h2>
-            {resdata && resdata.map(item => (
-                <p key={item.id}>{item.title}</p>
-            ))}
+      <h2> Custom Hook Data</h2>
+      {resdata && resdata.map(item => (
+        <p key={item.id}>{item.title}</p>
+      ))}
 
-            {/* {Here’s a **clear, in-depth comparison of REST vs GraphQL**—exactly how you’d explain it in an interview or use it in real projects.
+      {/* {Here’s a **clear, in-depth comparison of REST vs GraphQL**—exactly how you’d explain it in an interview or use it in real projects.
 
 ---
 
@@ -278,8 +281,8 @@ If you want next:
 
 
 
-        </>
-    )
+    </>
+  )
 }
 
 export default FetchingData;
