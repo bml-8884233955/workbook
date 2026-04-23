@@ -28,6 +28,7 @@ import Loading from "../pages/Api/Loading";
 import CartPage from "../pages/Cart/CartPage";
 import ProductListPage from "../pages/Cart/ProductListPage";
 import TestingDemo from "../pages/Testing/TestingDemo";
+import FormikLoginForm from "../pages/Forms/formikLogin";
 
 
 function AppRoutes() {
@@ -54,6 +55,7 @@ function AppRoutes() {
                         <Route path="uncontroled-form" element={<UncontrolledForm />} />
                         <Route path="login-form" element={<LoginForm />} />
                         <Route path="payment-form" element={<PaymentForm />} />
+                        <Route path="formik-form" element={<FormikLoginForm />} />
                     </Route>
                     <Route path="style" element={<Styling />} />
                     <Route path="routePage" element={<RoutePage />}>

@@ -35,7 +35,7 @@ function UseRef() {
                 <ul>
                     <li>
                         Access Dom elements Directly
-                    </li>x
+                    </li>
                     <li>
                         Store mutable values that do NOT cause re-render
                     </li>
@@ -49,14 +49,15 @@ function UseRef() {
                 ref.current
             </p>
             <div>
-                Key Difference from useState ⭐
-                Feature	useState	useRef
-                Causes re-render	✅ Yes	❌ No
-                Stores value	✅ Yes	✅ Yes
-                Mutable	❌ No	✅ Yes
+                Key Difference from useState
+
+                <li>Feature :- 	useState	useRef</li>
+                <li>Causes :- re-render	✅ Yes	❌ No</li>
+                <li>Stores :- value	✅ Yes	✅ Yes</li>
+                <li>Mutable	:- ❌ No	✅ Yes</li>
             </div>
 
-            <ul>
+            <ul className="px-4 py-5">
                 <li>
                     1. Does NOT trigger re-render
 
@@ -71,7 +72,7 @@ function UseRef() {
                     {/* <unput ref={inputRef} /> */}
                 </li>
                 <li>
-                    3. .current holds value
+                    3. current holds value
                     console.log(ref.current);
                 </li>
             </ul>
@@ -79,7 +80,7 @@ function UseRef() {
                 <h2 className="text-2xl font-bold text-gray-700"> use Ref common use cases</h2>
                 <p className="text-base text-gray-700 mb-4">Access DOM Element</p>
                 <input ref={inputRef} />
-                <button onClick={handleFocus}> Focus</button>
+                <button className="bg-blue-500 text-white px-3 py-2 rounded-md mx-2" onClick={handleFocus}> Focus</button>
             </div>
 
             <div>
@@ -87,7 +88,8 @@ function UseRef() {
                 <h2 className="text-2xl font-bold text-gray-700">Current: {count}</h2>
                 <h2 className="text-2xl font-bold text-gray-700">Previous: {prevCount.current}</h2>
 
-                <button onClick={() => setCount(prev => prev + 1)}>
+                <button className="bg-blue-600 text-white px-3 py-1 rounded-lg 
+hover:bg-blue-700 transition duration-300 ease-in-out" onClick={() => setCount(prev => prev + 1)}>
                     Increment
                 </button>
             </div>

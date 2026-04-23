@@ -14,6 +14,8 @@ const PaymentForm = () => {
 
     return (
         <>
+
+            <h2>React Form Hook validations</h2>
             <h2 class="text-center text-2xl font-bold">
                 Payment Form
             </h2>

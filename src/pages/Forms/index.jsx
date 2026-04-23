@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import Card from "../../components/Card";
 
@@ -32,6 +31,7 @@ function Index() {
                 <Card title="Uncontrolled Form" description="Un-controlled Form" cardClicked={() => navigateToPage("/forms/uncontroled-form")} />
                 <Card title="Login Form " description="Form Validation controlled" cardClicked={() => navigateToPage("/forms/login-form")} />
                 <Card title="Payment Form" description="React Hook Form" cardClicked={() => navigateToPage("/forms/payment-form")} />
+                <Card title="Formik Yup Login Form" description=" Formik Yup Form" cardClicked={() => navigateToPage("/forms/formik-form")} />
             </div >
             <Outlet />
 
@@ -47,7 +47,7 @@ function Index() {
             <li> React Hook Form</li>
             <li>Formik</li>
             <h3> Why React Hook Form </h3>
-            <li>Uses uncomtrolled internally</li>
+            <li>Uses uncontrolled internally</li>
             <li>Less re-renders</li>
             <li>Better Performance</li>
             <div className="w-full max-w-2xl border border-gray-200 rounded-lg overflow-hidden shadow-sm">
@@ -82,22 +82,21 @@ function Index() {
                 </div>
             </div>
 
-            <h3>Questions</h3>
 
             <ul>
+                <p>Questions</p>
                 <li>
-                    Questions
-                    🔹 Basic
+                    Basic :-
                     What is a controlled component?
                     Why use useState in forms?
                 </li>
                 <li>
-                    🔹 Intermediate
+                    Intermediate:-
                     Controlled vs uncontrolled?
                     How to handle multiple inputs?
                 </li>
                 <li>
-                    🔹 Advanced
+                    Advanced:-
                     How to optimize large forms?
                     Why React Hook Form is better?
                 </li>
@@ -111,7 +110,7 @@ function Index() {
                 <li>Controlled Form = most important</li>
                 <li>useState + onChange = core</li>
                 <li>hanldeSubmit + preventDefault</li>
-                <li>USe one State Object</li>
+                <li>Use one State Object</li>
                 <li>Validate Inputs</li>
                 <li>Use libraries in real apps</li>
             </ul>
