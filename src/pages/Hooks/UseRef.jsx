@@ -69,7 +69,7 @@ function UseRef() {
 
                     const inputRef = useRef();
 
-                    {/* <unput ref={inputRef} /> */}
+                    {/* <input ref={inputRef} /> */}
                 </li>
                 <li>
                     3. current holds value

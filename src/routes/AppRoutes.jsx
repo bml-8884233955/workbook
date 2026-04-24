@@ -29,6 +29,7 @@ import CartPage from "../pages/Cart/CartPage";
 import ProductListPage from "../pages/Cart/ProductListPage";
 import TestingDemo from "../pages/Testing/TestingDemo";
 import FormikLoginForm from "../pages/Forms/formikLogin";
+import Intro from "../pages/Home/Intro";
 
 
 function AppRoutes() {
@@ -70,6 +71,7 @@ function AppRoutes() {
                     <Route path="product" element={<ProductListPage />} />
                     <Route path="cart" element={<CartPage />} />
                     <Route path="testing" element={<TestingDemo />} />
+                    <Route path="intro" element={<Intro />} />
                 </Route>
                 <Route path="*" element={<NotFound />} />
             </Routes>
