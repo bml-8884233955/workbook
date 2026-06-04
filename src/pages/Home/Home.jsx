@@ -16,8 +16,8 @@ function Home() {
 
             <p>A place to practice and explore React concepts</p>
             <div style={{ display: "flex", gap: "20px" }}>
-                <Card title="Hooks" description="Learn useState, useEffect" cardClicked={() => navigateToPage("/hooks")} />
                 <Card title="Props" description="Understand data passing" cardClicked={() => navigateToPage("/props")} />
+                <Card title="Hooks" description="Learn useState, useEffect" cardClicked={() => navigateToPage("/hooks")} />
                 <Card title="Forms" description="Handle inputs" cardClicked={() => navigateToPage("/forms")} />
                 <Card title="Styling" description="Styling" cardClicked={() => navigateToPage("/style")} />
             </div>
